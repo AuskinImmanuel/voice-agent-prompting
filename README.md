@@ -8,13 +8,16 @@ I'm Auskin Immanuel. I build conversational voice agents for a living, on Eleven
 
 Most "prompt engineering" advice is written for chat. Voice on a phone line is a different problem. There is no scrollback, the caller talks over you, latency is brutal, and the call can end at any second. The way you write a prompt has to change for that. This repo is what I've learned doing it.
 
-Two things live here: short writeups on the how, and full sample agents that put the how into practice.
+Two things live here: short writeups on the how, and full sample agents that put the how into practice. The writeups now cover the whole arc, from prompt architecture through live pilot calls.
 
 ## Writeups
 
 - [Prompting architecture for production voice agents](writeups/01-prompting-architecture-for-voice-agents.md): the anatomy of a voice-agent system prompt, point-of-use rules vs global rules, lookup tables over abstract reasoning, and when to use a single-prompt agent vs a multi-intent workflow.
 - [Prompting for small, fast models on telephony](writeups/02-low-latency-telephony-prompting.md): why a fast, low-latency model (the Gemini 3.x Flash-Lite class) is usually the right call for live phone calls, and how you write prompts differently for one.
 - [Writing tools for voice agents](writeups/03-writing-tools-for-voice-agents.md): defining tools the agent calls, the two-phase lookup-then-act pattern, handling the response so the agent speaks it correctly, and the common failure modes.
+- [Scaling a prompt down: lean base plus scenario cards](writeups/04-lean-base-and-scenario-cards.md): restructuring a large multi-scenario agent for a small fast model, a short base prompt plus one card per scenario, a single trailing guardrails block, and cutting per-turn context from about 20K to 6.4K tokens.
+- [Workflow gates deadlock. Prompt-order rules don't.](writeups/05-gates-deadlock-prompt-order-wins.md): why platform must-gates freeze a live call when a prerequisite scenario ends incomplete, the removal of all 18 gates that fixed it, and how to carry scenario order as a hard numbered rule in the prompt instead.
+- [The live test-call loop: four calls, five commits, one spec](writeups/06-live-test-call-loop.md): why dashboard testing lies, the run-read-group-commit loop, four failure classes from live test calls (platform deadlocks, speech discipline, contract fidelity, stale deploys), and what belongs in a dev spec instead of the prompt.
 
 ## Sample agents
 
