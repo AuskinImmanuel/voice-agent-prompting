@@ -8,7 +8,7 @@ I'm Auskin Immanuel. I build conversational voice agents for a living, on Eleven
 
 Most "prompt engineering" advice is written for chat. Voice on a phone line is a different problem. There is no scrollback, the caller talks over you, latency is brutal, and the call can end at any second. The way you write a prompt has to change for that. This repo is what I've learned doing it.
 
-Two things live here: short writeups on the how, and full sample agents that put the how into practice. The writeups now cover the whole arc, from prompt architecture through live pilot calls.
+Two things live here: short writeups on the how, and full sample agents that put the how into practice. The writeups now cover the whole arc, from prompt architecture through live pilot calls. If you'd rather hear it than read it, my site has a voice agent built with everything in this repo: [auskinimmanuel.github.io](https://auskinimmanuel.github.io), click the orb and talk to Lia.
 
 ## Writeups
 
