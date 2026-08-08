@@ -8,7 +8,7 @@ I'm Auskin Immanuel. I build conversational voice agents for a living, on Eleven
 
 Most "prompt engineering" advice is written for chat. Voice on a phone line is a different problem. There is no scrollback, the caller talks over you, latency is brutal, and the call can end at any second. The way you write a prompt has to change for that. This repo is what I've learned doing it.
 
-Two things live here: short writeups on the how, and full sample agents that put the how into practice. The writeups now cover the whole arc, from prompt architecture through live pilot calls. If you'd rather hear it than read it, my site has a voice agent built with everything in this repo: [auskinimmanuel.github.io](https://auskinimmanuel.github.io), click the orb and talk to Lia.
+Two things live here: short writeups on the how, and full sample agents that put the how into practice. The writeups now cover the whole arc, from prompt architecture through live pilot calls and multi-location routing. If you'd rather hear it than read it, my site has a voice agent built with everything in this repo: [auskinimmanuel.github.io](https://auskinimmanuel.github.io), click the orb and talk to Lia.
 
 ## Writeups
 
@@ -18,6 +18,7 @@ Two things live here: short writeups on the how, and full sample agents that put
 - [Scaling a prompt down: lean base plus scenario cards](writeups/04-lean-base-and-scenario-cards.md): restructuring a large multi-scenario agent for a small fast model, a short base prompt plus one card per scenario, a single trailing guardrails block, and cutting per-turn context from about 20K to 6.4K tokens.
 - [Workflow gates deadlock. Prompt-order rules don't.](writeups/05-gates-deadlock-prompt-order-wins.md): why platform must-gates freeze a live call when a prerequisite scenario ends incomplete, the removal of all 18 gates that fixed it, and how to carry scenario order as a hard numbered rule in the prompt instead.
 - [The live test-call loop: four calls, five commits, one spec](writeups/06-live-test-call-loop.md): why dashboard testing lies, the run-read-group-commit loop, four failure classes from live test calls (platform deadlocks, speech discipline, contract fidelity, stale deploys), and what belongs in a dev spec instead of the prompt.
+- [Location mapping and human handoff for multi-branch voice agents](writeups/07-location-mapping-and-human-handoff.md): deriving the caller's branch instead of reading them a menu, fallback ladders built on measured distance rather than list order, walling off sites you can only transfer to, and the keyed anchor-phrase contract behind every human handoff.
 
 ## Sample agents
 
