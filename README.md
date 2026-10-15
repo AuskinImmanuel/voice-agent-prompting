@@ -36,7 +36,7 @@ Each inbound folder has a README, `workflow.md` (the node and edge graph), `base
 
 ## A note on what's not here
 
-I don't publish anything from work. No employer prompts, no client names, no real call data. The techniques are general craft and the sample agents are written from scratch for this repo in domains I don't work in. That's deliberate.
+No employer prompts, no client names, no real call data. The sample agents are written from scratch for this repo in domains I don't work in. Writeups 04 to 07 draw on patterns from real builds, with every detail that could identify a customer taken out. That's deliberate.
 
 ## Reach me
 
